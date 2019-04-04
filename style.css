@@ -1,0 +1,173 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
+
+body {
+  position: relative;
+}
+.css-typing p {
+  border-right: 0.15em solid black;
+  font-family: "Tahoma";
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 27em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 4s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 24em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 4s steps(40, end);
+  -webkit-animation-delay: 1s;
+  animation-delay: 4.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 15em;
+  opacity: 0;
+  -webkit-animation: type3 5s steps(20, end),
+    blink 0.5s step-end infinite alternate;
+  animation: type3 4s steps(20, end), blink 0.5s step-end infinite alternate;
+  -webkit-animation-delay: 2s;
+  animation-delay: 8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid rgb(0, 0, 0);
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid black;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid black;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid black;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  margin: 50px 50px;
+  /* text-align: center; */
+}
+h3 {
+  text-align: center;
+}
+.card {
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.1);
+  padding: 1rem 0;
+  padding-top: 0;
+  overflow: hidden;
+}
+button {
+  margin: 0;
+  border-radius: 5px;
+}
+
+.bgn-gray {
+  background-color: lightgray;
+}
+.thin-white-border {
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  color: white;
+}
+.pad-top {
+  padding-top: 50px;
+}
+
+/* comment*/
