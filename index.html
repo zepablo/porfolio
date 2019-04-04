@@ -5,16 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- imports css-->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    /> -->
+
+    <!-- he order of files imported matters when you have some dependencies like bootstrap requires jquery to work.
+
+      If you use bootstrap 4 even bootstrap depends on tether which is required to be imported before bootstrap. 
+      - https://stackoverflow.com/questions/45756307/bootstrap-4-toggle-button-not-working    StackOverflow-->
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
     <!-- imports fontawesome icons-->
   </head>
 
@@ -25,22 +52,38 @@
     background="http://umad.com/img/2015/3/gray-texture-wallpaper-1811-1906-hd-wallpapers.jpg"
   >
     <!-- Creates ribbon/buttons -->
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand color-white" href="#">JP's Website</a>
-        </div>
-        <div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about-me"> About Me</a></li>
-            <!--class="thin-white-border"-->
-            <li><a href="#portafolio"> Portafolio</a></li>
-            <li><a href="#contact-me"> Contact Me</a></li>
-          </ul>
-        </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Home</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  navbar-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about-me"
+              >About-me <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-me">Contact</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li> -->
+        </ul>
       </div>
     </nav>
-    <!-- <body class="container"  background="http://images.trvl-media.com/media/content/shared/images/travelguides/Guanacaste-North-Pacific-Coast-6052902-smallTabletRetina.jpg"> -->
 
     <div class="container about-me" id="about-me">
       <h1 class="text-center pad-top"><strong> About Me</strong></h1>
@@ -68,8 +111,8 @@
       </div>
     </div>
 
-    <div id="portafolio" class="container">
-      <h1 class="text-center pad-top"><b>Portafolio</b></h1>
+    <div id="portfolio" class="container">
+      <h1 class="text-center pad-top"><b>Portfolio</b></h1>
       <div class="project-grid">
         <div class="card">
           <h3>Pomodoro Clock</h3>
